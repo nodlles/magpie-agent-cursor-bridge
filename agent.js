@@ -6,7 +6,7 @@ export const agent = {
   format: "json",
   model: "model",
   ua: ["cursor-magpie-bridge"],
-  notice: "v0.2.0：安装或更新插件后，请运行包内 setup.command 完成后台初始化。首次连接后重启 Cursor。后台桥接随连接启停；断开后还原代理。请勿同时开启 Cursor BYOK 接管。"
+  notice: "v0.2.2：安装或更新插件后，请运行包内 setup.command 完成后台初始化。首次连接后重启 Cursor。后台桥接随连接启停；断开后还原代理。请勿同时开启 Cursor BYOK 接管。"
 };
 export function connect({ gateway, model, models }) {
   return {

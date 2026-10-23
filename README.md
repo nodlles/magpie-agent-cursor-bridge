@@ -1,6 +1,6 @@
 # Cursor · Magpie Bridge
 
-让普通版 Cursor 使用 Magpie 中配置的模型和路由组。模型菜单仅返回 Magpie 模型目录，并隐藏 Cursor Auto 入口，保留 Cursor 原有登录。当前版本 **0.2.1，仅支持 Apple Silicon macOS**，适配 Magpie 0.1.1220 和 Cursor 3.24.12。
+让普通版 Cursor 使用 Magpie 中配置的模型和路由组。模型菜单仅返回 Magpie 模型目录，并隐藏 Cursor Auto 入口，保留 Cursor 原有登录。当前版本 **0.2.2，仅支持 Apple Silicon macOS**，适配 Magpie 0.1.1327 与 Cursor 3.27.6（会关闭 Cursor 3.27 服务端下发的本地循环开关，详见 CHANGELOG）。
 
 升级后重启 Cursor 以刷新模型菜单。已有聊天若仍显示 Auto，请手动改选一次 Magpie 模型；此版本隐藏菜单入口，不改写已有聊天保存的模型选择。
 
@@ -13,10 +13,10 @@
 在 Magpie → Plugins 添加以下固定版本地址：
 
 ```text
-github:nodlles/magpie-agent-cursor-bridge#v0.2.1
+github:nodlles/magpie-agent-cursor-bridge#v0.2.2
 ```
 
-[项目主页](https://github.com/nodlles/magpie-agent-cursor-bridge) · [v0.2.1 发布页与安装包](https://github.com/nodlles/magpie-agent-cursor-bridge/releases/tag/v0.2.1)
+[项目主页](https://github.com/nodlles/magpie-agent-cursor-bridge) · [v0.2.2 发布页与安装包](https://github.com/nodlles/magpie-agent-cursor-bridge/releases/tag/v0.2.2)
 
 此版本通过 GitHub 发布；无需从其他机器复制配置，也无需 npm 账号。
 
@@ -30,7 +30,7 @@ bash "$HOME/.config/magpie/plugins/node_modules/magpie-agent-cursor-bridge/setup
 
 ### 从 ZIP 安装
 
-[下载 Apple Silicon macOS 安装包](https://github.com/nodlles/magpie-agent-cursor-bridge/releases/download/v0.2.1/magpie-agent-cursor-bridge-0.2.1-macos-arm64.zip)，解压后在终端输入 `bash `，把包内 `setup.command` 拖进终端，回车。它会自动把插件注册到 Magpie。首次使用 Magpie、尚无 Bun 时，先在 Magpie → Plugins 添加解压后的插件文件夹，再运行初始化。
+[下载 Apple Silicon macOS 安装包](https://github.com/nodlles/magpie-agent-cursor-bridge/releases/download/v0.2.2/magpie-agent-cursor-bridge-0.2.2-macos-arm64.zip)，解压后在终端输入 `bash `，把包内 `setup.command` 拖进终端，回车。它会自动把插件注册到 Magpie。首次使用 Magpie、尚无 Bun 时，先在 Magpie → Plugins 添加解压后的插件文件夹，再运行初始化。
 
 初始化会在本机生成独立证书，并请求 macOS 信任（可能需要确认或密码）。证书名称沿用上游的 `Cursor BYOK Local CA`。证书和私钥仅存在本机，安装包不会携带。已有桥接证书会被保留；取消授权后可重新运行初始化。
 
